@@ -18,7 +18,7 @@ class Item(Resource):
         'price', type=float, required=True, help="This field is required"
     )
 
-    @jwt_required
+    @jwt_required()
     def get(self, name):
         item = next(filter(lambda x: x['name'] == name, items), None)
         return {'item': item}, 200 if item else 404
@@ -53,7 +53,7 @@ class Item(Resource):
 
 class ItemList(Resource):
     def get(self):
-        return{'items'.items}
+        return{'items': items}
 
 
 api.add_resource(Item, '/api/item/<string:name>')

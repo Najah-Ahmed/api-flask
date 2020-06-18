@@ -14,7 +14,7 @@ class User:
 
         query = "SELECT * FROM users WHERE username=?"
 
-        result = cursor.execute(quert, (username,))
+        result = cursor.execute(query, (username,))
         row = result.fetchone()
         if row:
             user = cls(*row)
@@ -31,7 +31,7 @@ class User:
 
         query = "SELECT * FROM users WHERE id=?"
 
-        result = cursor.execute(quert, (_id,))
+        result = cursor.execute(query, (_id,))
         row = result.fetchone()
         if row:
             user = cls(*row)
