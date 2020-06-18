@@ -1,0 +1,7 @@
+Pipfile
+Pipfile.lock
+.vscode
+data.db  
+/test
+.DS_Store
+/app/__pycache__
